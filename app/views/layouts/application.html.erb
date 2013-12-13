@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Haiyantour</title>
+	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<%= link_to "HAIYAN TOUR", root_url %>
+		<%= link_to "Story", story_url %>
+		<%= link_to "News", news_url %>
+		<%= link_to "Media", media_url %>
+		<%= link_to "Discovery", discovery_url %>
+		<%= link_to "Contact Us", contact_url %>
+		<%= yield %>
+
+	</body>
+</html>
