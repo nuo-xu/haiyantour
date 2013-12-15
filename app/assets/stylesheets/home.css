@@ -1,0 +1,14 @@
+.page-slides {
+	position: relative; 
+	width: auto; 
+	height: 800px; 
+	background-color: #E0E0E0 ;
+}
+
+.page-slides img {
+	width: 1400px;
+	height: 800px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

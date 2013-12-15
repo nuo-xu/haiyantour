@@ -11,9 +11,7 @@
 	<body>
 		<div id="cssmenu">
 			<ul>
-				<li><%= link_to "STORY", story_url %></li>
-				<li><%= link_to "NEWS", news_url %></li>
-				<li><%= link_to "MEDIA", media_url %></li>
+				<li><%= link_to "CONTACT US", contact_url %></li>
 				<li class="has-sub"><%= link_to "DISCOVERY", discovery_url %>
 					<ul>
 						<li><%= link_to "FOOD", discovery_url %></li>
@@ -23,7 +21,10 @@
 						<li class="last"><%= link_to "BUSINESS", discovery_url %></li>
 					</ul>
 				</li>
-				<li><%= link_to "CONTACT US", contact_url %></li>
+				<li><%= link_to "MEDIA", media_url %></li>
+				<li><%= link_to "NEWS", news_url %></li>
+				<li><%= link_to "STORY", story_url %></li>
+				<li><%= link_to "HOME", root_url %></li>	
 			</ul>
 		</div>
 		<%= yield %>
