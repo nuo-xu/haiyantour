@@ -63,6 +63,7 @@
   background-color: #3ac1f2;
   text-align: left;
   position: absolute;
+  z-index: 1;
   top: 55px;
   left: 50%;
   margin-left: -90px;
