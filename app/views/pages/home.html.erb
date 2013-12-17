@@ -46,6 +46,17 @@
 				<div class="column subscriber">
 					<h3>HYTOUR Newsletter</h3>
 					<p>Interested in Haiyan Tour updates?</p>
+					<%= form_for(Subscriber.new) do |f| %>
+						<% if flash[:notice] %>
+  						<p class="notice"><%= flash[:notice] %></p>
+						<% end %>
+						<div>
+							<%= f.text_field :email_address, class: "subscribeInputField", placeholder: "Email Address" %>
+						</div>
+						<div>
+							<%= f.submit "Subscribe", class: "subscribeButton"%>
+						</div>
+					<% end %>
 				</div>
 			</div>
 		</div>
