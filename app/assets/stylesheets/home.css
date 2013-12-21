@@ -258,3 +258,44 @@ hr.line-divider {
 	color:#00CCFF;
 	text-decoration: none;
 }
+
+.weibo-feeds {
+
+}
+
+.weibo-feeds ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.weibo-feeds ul li {
+	margin:10px 0 0 0;
+	padding:10px 0 8px 0;
+	font-size:14px;
+	border-top:1px solid #dbdee1;
+}
+
+.weibo-feeds span {
+	display: block;
+	font-size: 15px;
+}
+
+.weibo-feeds div.anchored {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+}
+
+.weibo-feeds .anchored a {
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+	height:32px; width:32px;
+	background-image:url('weibo_32x32.png');
+	margin:17px 12px 0 0;
+}
+
+.weibo-feeds .anchored a.weibo {
+	background-position:0 -33px;
+}
