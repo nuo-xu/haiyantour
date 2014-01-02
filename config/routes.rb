@@ -1,5 +1,6 @@
 Haiyantour::Application.routes.draw do
   resources :subscribers, only: :create
+  resources :contacts, only: :create
   # get "pages/home"
   get "story" => "pages#story"
   get "news" => "pages#news"
