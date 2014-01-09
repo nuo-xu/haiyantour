@@ -1,5 +1,4 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<!-- TODO: UI  -->
 <%= form_for(Contact.new) do |f| %>
 
 	<div>
@@ -33,6 +32,8 @@
 	<div>
 	<%= f.label :heard_about_us %><br>
 	<%= f.select :heard_about_us, ["", "News/Magzine", "Weibo/wechat/facebook", "HaiyanTour Website, Newsletter", "Conference", "Other"], {} %>
+	</div>
+		<%= f.submit "Submit" %>
 	</div>
 <% end %>
 
