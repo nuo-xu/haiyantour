@@ -2,6 +2,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
 
+    # TODO: trigger the mailer to send email to both contact and admin
     respond_to do |format|
       if @contact.save
         format.html { redirect_to contact_url, notice: 'Thank you for submitting your letter. We will contact you shortly.' }
