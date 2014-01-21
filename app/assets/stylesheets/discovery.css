@@ -14,6 +14,7 @@
 	height: 400px;
 	margin: 0, auto;
 	margin-top: 25px;
+	background-color: blue;
 }
 
 .wrapper {
@@ -37,6 +38,18 @@
 	margin-top: 25px;
 }
 
+.toggler ul li {
+	position: relative;
+}
+
+.toggler ul li div {
+	position: absolute;
+}
+
+.toggler ul li li {
+	position: absolute;
+}
+
 .effect {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -57,7 +70,121 @@
 	font-size: 15px;
 	margin-left: 10px;
 	margin-right: 5px;
+	z-index: 1000;
 }
 
 /* Hotel Section */
+.hotel {
+	width: 100%;
+	height: 400px;
+	margin: 0, auto;
+	margin-top: 25px;
+	background-color: red;
+}
+
+.tt-wrapper {
+	padding: 0;
+	width: 1000px;
+	height: 120px;
+	margin: 80px auto 30px auto;
+}
+
+.tt-wrapper li {
+	float: left;
+	list-style: none;
+}
+
+.tt-wrapper li a {
+	display: block;
+	width: 110px;
+	height: 120px;
+	margin: 0 2px;
+	outline: none;
+	background: transparent url('hotel.png') no-repeat top left;
+	position: relative;
+}
+
+.tt-wrapper li .tt_one {
+	background-position: 0px 0px;
+}
+
+.tt-wrapper li .tt_two {
+	background-position: -110px 0px;
+}
+
+.tt-wrapper li .tt_three {
+	background-position: -220px 0px;
+}
+
+.tt-wrapper li .tt_four {
+	background-position: -330px 0px;
+}
+
+.tt-wrapper li .tt_five {
+	background-position: -440px 0px;
+}
+
+.tt-wrapper li .tt_six {
+	background-position: -555px 0px;
+}
+
+.tt-wrapper li .tt_seven {
+	background-position: -666px 0px;
+}
+
+.tt-wrapper li .tt_eight {
+	background-position: -777px 0px;
+}
+
+.tt-wrapper li a span {
+	width: 160px;
+	height: auto;
+	line-height: 20px;
+	padding: 10px;
+	left: -15px;
+	margin-left: -64px
+	font-family: Tahoma, Arial, Helvetica, "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑", sans-serif;
+	font-size: 14px;
+	color: #719DAB;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	border: 4px solid #fff;
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 5px;
+	position: absolute;
+	pointer-events: none;
+	bottom: 150px;
+	opacity: 0;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.tt-wrapper li a span:before,
+.tt-wrapper li a span:after{
+	content: '';
+	position: absolute;
+	bottom: -15px;
+	left: 55%;
+	margin-left: -19px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid rgba(0,0,0,0.1);
+}
+.tt-wrapper li a span:after{
+	bottom: -14px;
+	margin-left: -20px;
+	border-top: 10px solid #fff;
+}
+.tt-wrapper li a:hover span{
+	opacity: 0.9;
+	bottom: 110px;
+}
+
+
 
