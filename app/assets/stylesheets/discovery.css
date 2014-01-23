@@ -1,41 +1,35 @@
-@media screen and (max-width: 31.5em) {
-	.grid {
-		padding: 10px 10px 100px 10px;
-	}
-	.grid li {
-		width: 100%;
-		min-width: 300px;
-	}
-}
 
 /* Food Section */
 .food {
 	width: 100%;
-	height: 600px;
+	height: 550px;
 	margin: 0, auto;
 	margin-top: 25px;
+	background: url('top_food.png') no-repeat;
+	background-color: #FF6600
 }
 
 .mh-menu {
 	width: 1000px;
-	height:500px;
-	margin: 20px auto;
+	height:555px;
+	margin: 10px auto;
 	position: relative;
 }
 
 .mh-menu li {
 	width: 300px;
 	list-style: none;
+	margin-left: -30px;
 }
 
 .mh-menu li a {
 	display: block;
-	padding: 0px 10px;
+	padding: 5px 10px;
 	text-align: right;
 	text-decoration: none;
 	position: relative;
 	z-index: 10;
-	height: 50px;
+	height: 55px;
 	background: rgba(255, 255, 255, 0.8);
 }
 
@@ -49,6 +43,7 @@
 	font-weight: bold;
 	font-style: italic;
 	font-size: 28px;
+	color: #080808 ;
 	padding-top: 10px;
 }
 
@@ -82,7 +77,7 @@
 	color: #8e7463;
 }
 
-.mh-menu li img{
+.mh-menu li div{
 	position: absolute;
 	z-index: 1;
 	left: 0px;
@@ -94,54 +89,75 @@
 	-ms-transition: left 0.4s ease-in-out, opacity 0.6s ease-in-out;
 	transition: left 0.4s ease-in-out, opacity 0.6s ease-in-out;
 }
-.mh-menu li:hover img{
+.mh-menu li:hover div{
 	left: 300px;
 	opacity: 1;
 }
 
-.mh-menu li p {
-	position: absolute;
-	z-index: 1;
-	left: 0px;
-	top: 0px;
-	opacity: 0;
-	-webkit-transition: left 0.4s ease-in-out, opacity 0.6s ease-in-out;
-	-moz-transition: left 0.4s ease-in-out, opacity 0.6s ease-in-out;
-	-o-transition: left 0.4s ease-in-out, opacity 0.6s ease-in-out;
-	-ms-transition: left 0.4s ease-in-out, opacity 0.6s ease-in-out;
-	transition: left 0.4s ease-in-out, opacity 0.6s ease-in-out;
+.caption {
+	display: inline-block;
+	position: relative;
+	margin: 10px;
 }
 
-.mh-menu li:hover p {
-	left: 600px;
-	opacity: 1;
+.caption img {
+	display: block;
+	max-width: 100%;
 }
 
+.caption::before,
+.caption::after {
+    position: absolute;
+    left: 100%;
+    width: 90%;
+    margin: 0 0 0 10%;
+    font-weight: 300;
+    color: #89867e;
+}
+
+.caption::before {
+    content: attr(data-title);
+    top: 0;
+    height: 25%;
+    padding: 5px 30px 15px 10px;
+    font-size: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.caption::after {
+    content: attr(data-description);
+    top: 25%;
+    padding: 20px 10px 0;
+    font-family: Tahoma, Arial, Helvetica, "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑", sans-serif;
+	font-size: 15px;
+}
 /* Hotel Section */
 .hotel {
 	width: 100%;
-	height: 400px;
+	height: 500px;
 	margin: 0, auto;
-	margin-top: 200px;
+	background: url('hotel-title.png') no-repeat;
+	background-color: #FF9999;
 }
 
 .tt-wrapper {
 	padding: 0;
 	width: 1000px;
 	height: 120px;
-	margin: 80px auto 30px auto;
+	margin: 0 auto 30px auto;
 }
 
 .tt-wrapper li {
 	float: left;
 	list-style: none;
+	margin-top: 
 }
 
 .tt-wrapper li a {
 	display: block;
 	width: 110px;
 	height: 120px;
-	margin: 0 2px;
+	margin: 200px 2px;
 	outline: none;
 	background: transparent url('hotel.png') no-repeat top left;
 	position: relative;
