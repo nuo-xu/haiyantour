@@ -1,100 +1,120 @@
 <!DOCTYPE html>
 <html>
-	<%= stylesheet_link_tag "discovery.css" %>
-	<%= stylesheet_link_tag "home.css" %>
 	<head>
 		<meta http-equiv="content-language" content="zh" />
-		<title>jQuery UI Effects - Toggle Demo</title>
-		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-		<link rel="stylesheet" href="/resources/demos/style.css">
-		<style>
-		
-		</style>
-		<script>
-		$(function() {
-		  // run the currently selected effect
-		  function runEffect(selectedButton) {
-		    selectedEffect = "fold";
-		
-		    // most effect types need no options passed by default
-		    var options = {};
-		    options = { to: { width: 200, height: 60 } };
-		
-		    // run the effect
-		    if (selectedButton=="button_one") {
-		    	$( "#effect_one" ).toggle( selectedEffect, options, 500 );
-		    } else if (selectedButton=="button_two") {
-		    	$( "#effect_two" ).toggle( selectedEffect, options, 500 );
-		    } else if (selectedButton=="button_three") {
-		    	$( "#effect_three" ).toggle( selectedEffect, options, 500 );
-		    } else if (selectedButton=="button_four") {
-		    	$( "#effect_four" ).toggle( selectedEffect, options, 500 );
-		    } else if (selectedButton=="button_five") {
-		    	$( "#effect_five" ).toggle( selectedEffect, options, 500 );
-		    } else {
-		    	$( "#effect_six" ).toggle( selectedEffect, options, 500 );
-		    }   
-		  };
-		
-		  // set effect from select menu value
-		  $( ".button" ).click(function() {
-		  	selectedButton = this.id
-		    runEffect(selectedButton);
-		    return false;
-		  });
-		});
-		</script>
+		<%= stylesheet_link_tag "discovery.css" %>
 	</head>
 	<body>
 		<div class="page">
 			<div class="food">
-		  	<ul class="toggler">
-		  		<li>
-	  				<%= link_to image_tag("1.png", :class=>"wrapper"), "#", {:class=>"button", :id=>"button_one"}%>
-	  				<div class="effect" id="effect_one">
-	  					<h3>Toggle Title</h3>
-	  					<p>澉浦红烧羊肉取自当地的湖羊肉，首先将羊肉切成半斤左右的大块，放入锅中，加水没过羊肉，用木柴做燃料，加黄酒、生姜、酱油，用旺	火煮。待羊肉煮熟时，再改用文火焖煨，直至羊肉酥透，再放入适量的红糖，使卤汁起膏。羊肉起锅时，必须撒上一把蒜叶，吃起来香气更足。	秋冬时节，当地有吃羊肉早烧的习俗。一早在古镇澉浦的街头就能闻到从大街小巷飘出一阵阵羊肉的香气。早在二十世纪三十年代，澉浦羊肉已	驰名沪上。很多上海人开着小汽车特地到澉浦来吃羊肉。时至今日，一提起海盐南北湖，一些老上海便要联想起澉浦红烧羊肉。</p>
-	  				</div>
-		  		</li>
-		  		<li>
-	  				<%= link_to image_tag("2.png", :class=>"wrapper"), "#", {:class=>"button", :id=>"button_two"}%>
-	  				<div class="effect" id="effect_two">
-	  					<h3>Toggle Title</h3>
-	  					<p>海盐天宝是海盐民间一道地方特色菜，口感嫩脆，香味浓郁，源料来自猪经阉割后切除的部位。这道菜的制作，主要是第一步，要处理得干	净，下锅前，锅要烧得很烫，将油熬透。下锅后进行煸炒，然后按次序放黄酒去腥，放啤酒使口感更嫩些，放香味如葱等，再加姜，继续煸炒至	透，即可起锅装盘。周边食客经常慕名前来品尝。海盐民间流传吃法有：红烧天宝、天宝汤、白灼天宝、葱煸天宝。</p>
-	  				</div>
-		  		</li>
-		  		<li>
-	  				<%= link_to image_tag("3.png", :class=>"wrapper"), "#", {:class=>"button", :id=>"button_three"}%>
-	  				<div class="effect" id="effect_three">
-	  					<h3>奶香紫薯泥</h3>
-          	  <p>奶香紫薯泥这道菜色泽诱人、香气沁人，从外观上就直接激发了吃客的食欲。原料直接选自海盐本地产的紫薯，既具地方特色，又有极高的	营养和药用价值。 紫薯（学名：Ipomoea batatas）又叫黑薯，英文名称Purple Potato，薯肉呈紫色至深紫色。它除了具有普通红薯的营	养成分外，还含有多糖、黄酮类物质，并且还富含硒元素和花青素，具有预防高血压、减轻肝机能障碍等功能，还有很好的抗癌功能。花青素对	100多种疾病有预防和治疗作用，被誉为继水、蛋白质、脂肪、碳水化合物、维生素、矿物质之后的第七大必需营养素。</p>
-	  				</div>
-		  		</li>
-		  		<li>
-	  				<%= link_to image_tag("4.png", :class=>"wrapper"), "#", {:class=>"button", :id=>"button_four"}%>
-	  				<div class="effect" id="effect_four">
-	  					<h3>南北湖盐炒肉</h3>
-          	  <p>是我县澉浦一带民间特色菜。做法是：将带皮的五花肉，切成一段一段的，洗净沥干，把锅子烧热，直接把肉块放到锅子里面，不用放油，	然后放一勺盐，一般一个大碗的肉放一勺盐，再放一点椒盐粉，一起翻炒，直至生肉的颜色变色，然后乘起，放在碗里，放生姜丝+料酒，隔水	蒸30分钟左右。该菜盐香扑鼻，入口肥而不腻。<p>
-	  				</div>
-		  		</li>
-		  		<li>
-		  			<%= link_to image_tag("5.png", :class=>"wrapper"), "#", {:class=>"button", :id=>"button_five"}%>
-		  			<div class="effect" id="effect_five">
-		  				<h3>千亩荡双鲜合蒸</h3>
-	            <p>原料选自千亩荡水域中的白条鱼、螺丝搭配火腿，蒸制而成。千亩荡水域面积为1.02平方公里，平均水深3米。千亩荡有9条河道通往外港，	东接盐嘉塘，北连大横港，西接百步港，并与西南的长山河相连，无论是水量还是水质都比较理想。千亩荡清澈的水域养育的白条鱼和螺丝两种	原料结合在一起，烹制的这道菜地方特色鲜明，搭配火腿真正做到了鲜上鲜。</p>
-		  			</div>
-		  		</li>
-		  		<li>
-		  			<%= link_to image_tag("6.png", :class=>"wrapper"), "#", {:class=>"button", :id=>"button_six"}%>
-		  			<div class="effect" id="effect_six">
-		  				<h3>南北湖醋烧鱼</h3>
-	            <p>南北湖醋烧鱼也叫南北湖醋鱼汤，用取自南北湖中的生态有机鱼（胖头鱼），炖出乳白色的汤汁，在出锅前，加入白醋及韭芽段。这道醋鱼	汤酸鲜爽口，还有韭芽的香味沁入鱼肉，闻着香，吃着鲜。用醋做成的鱼汤，在海盐澉浦已有千年历史，一举多得，我们不得不感叹古人的独特	创意。如今，澉浦后人在醋烧鱼的基础上，增创了“一鱼两吃”的烹制方法，即鱼头红烧，鱼尾煮汤，尝遍整条鱼的美味。</p>
-		  			</div>
-		  		</li>
-		  	</ul>
-		  </div>
+				<ul class="mh-menu">
+					<li>
+						<a href="#">
+							<span>面拖黄夹蟹</span>
+						</a>
+						<%= image_tag "1.png" %>
+					</li>
+					<li>
+						<a href="#">
+							<span>海盐天宝</span>
+						</a>
+						<%= image_tag "2.png" %>
+					</li>
+					<li>
+						<a href="#">
+							<span>奶香紫薯泥</span>
+						</a>
+						<%= image_tag "3.png" %>
+					</li>
+					<li>
+						<a href="#">
+							<span>千亩荡双鲜合蒸</span>
+						</a>
+						<%= image_tag "4.png" %>
+					</li>
+					<li>
+						<a href="#">
+							<span>南北湖盐炒肉</span>
+						</a>
+						<%= image_tag "5.png" %>
+					</li>
+					<li>
+						<a href="#">
+							<span>桔香咕噜肉</span>
+						</a>
+						<%= image_tag "6.png" %>
+					</li>
+					<li>
+						<a href="#">
+							<span>南北湖醋烧鱼</span>
+						</a>
+						<%= image_tag "1.png" %>
+					</li>
+					<li>
+						<a href="#">
+							<span>一品田园螺</span>
+						</a>
+						<%= image_tag "2.png" %>
+					</li>
+					<li>
+						<a href="#">
+							<span>海盐大头菜</span>
+						</a>
+						<%= image_tag "3.png" %>
+					</li>
+					<li>
+						<a href="#">
+							<span>澉浦红烧羊肉</span>
+						</a>
+						<%= image_tag "5.png" %>
+					</li>
+				</ul>
+		  		<!-- <ul class="toggler">
+		  			<li>
+	  					<%= link_to image_tag("1.png", :class=>"wrapper"), "#", {:class=>"button", :id=>"button_one"}%>
+	  					<div class="effect" id="effect_one">
+	  						<h3>Toggle Title</h3>
+	  						<p>澉浦红烧羊肉取自当地的湖羊肉，首先将羊肉切成半斤左右的大块，放入锅中，加水没过羊肉，用木柴做燃料，加黄酒、生	姜、酱油，用旺	火煮。待羊肉煮熟时，再改用文火焖煨，直至羊肉酥透，再放入适量的红糖，使卤汁起膏。羊肉起锅时，必须撒	上一把蒜叶，吃起来香气更足。	秋冬时节，当地有吃羊肉早烧的习俗。一早在古镇澉浦的街头就能闻到从大街小巷飘出一阵	阵羊肉的香气。早在二十世纪三十年代，澉浦羊肉已		驰名沪上。很多上海人开着小汽车特地到澉浦来吃羊肉。时至今日，一提起海盐南北湖，一些老上海便要联想起澉浦红烧羊肉。	</p>
+	  					</div>
+		  			</li>
+		  			<li>
+	  					<%= link_to image_tag("2.png", :class=>"wrapper"), "#", {:class=>"button", :id=>"button_two"}%>
+	  					<div class="effect" id="effect_two">
+	  						<h3>Toggle Title</h3>
+	  						<p>海盐天宝是海盐民间一道地方特色菜，口感嫩脆，香味浓郁，源料来自猪经阉割后切除的部位。这道菜的制作，主要是第一	步，要处理得干	净，下锅前，锅要烧得很烫，将油熬透。下锅后进行煸炒，然后按次序放黄酒去腥，放啤酒使口感更嫩些，放香	味如葱等，再加姜，继续煸炒至		透，即可起锅装盘。周边食客经常慕名前来品尝。海盐民间流传吃法有：红烧天宝、天宝汤、白灼天宝、葱煸天宝。</p>
+	  					</div>
+		  			</li>
+		  			<li>
+	  					<%= link_to image_tag("3.png", :class=>"wrapper"), "#", {:class=>"button", :id=>"button_three"}%>
+	  					<div class="effect" id="effect_three">
+	  						<h3>奶香紫薯泥</h3>
+          		  <p>	奶香紫薯泥这道菜色泽诱人、香气沁人，从外观上就直接激发了吃客的食欲。原料直接选自海盐本地产的紫薯，既具地方特色，又有极高的		营养和药用价值。 紫薯（学名：Ipomoea batatas）又叫黑薯，英文名称Purple 	Potato，薯肉呈紫色至深紫色。它除了具有普通红薯的营	养成分外，还含有多糖、黄酮类物质，并且还富含硒元素和花青素，具有预防高血	压、减轻肝机能障碍等功能，还有很好的抗癌功能。花青素对		100多种疾病有预防和治疗作用，被誉为继水、蛋白质、脂肪、碳水化合物、维生素、矿物质之后的第七大必需营养素。</p>
+	  					</div>
+		  			</li>
+		  			<li>
+	  					<%= link_to image_tag("4.png", :class=>"wrapper"), "#", {:class=>"button", :id=>"button_four"}%>
+	  					<div class="effect" id="effect_four">
+	  						<h3>南北湖盐炒肉</h3>
+          		  <p>	是我县澉浦一带民间特色菜。做法是：将带皮的五花肉，切成一段一段的，洗净沥干，把锅子烧热，直接把肉块放到锅子里面，不用放油，		然后放一勺盐，一般一个大碗的肉放一勺盐，再放一点椒盐粉，一起翻炒，直至生肉的颜色变色，然后乘起，放在碗里，放生姜丝+料酒，	隔水	蒸30分钟左右。该菜盐香扑鼻，入口肥而不腻。<p>
+	  					</div>
+		  			</li>
+		  			<li>
+		  				<%= link_to image_tag("5.png", :class=>"wrapper"), "#", {:class=>"button", :id=>"button_five"}%>
+		  				<div class="effect" id="effect_five">
+		  					<h3>千亩荡双鲜合蒸</h3>
+	        	    <p>原料选自千亩荡水域中的白条鱼、螺丝搭配火腿，蒸制而成。千亩荡水域面积为1.	02平方公里，平均水深3米。千亩荡有9条河道通往外港，	东接盐嘉塘，北连大横港，西接百步港，并与西南的长山河相连，无论是水	量还是水质都比较理想。千亩荡清澈的水域养育的白条鱼和螺丝两种		原料结合在一起，烹制的这道菜地方特色鲜明，搭配火腿真正做到了鲜上鲜。</p>
+		  				</div>
+		  			</li>
+		  			<li>
+		  				<%= link_to image_tag("6.png", :class=>"wrapper"), "#", {:class=>"button", :id=>"button_six"}%>
+		  				<div class="effect" id="effect_six">
+		  					<h3>南北湖醋烧鱼</h3>
+	        	    <p>	南北湖醋烧鱼也叫南北湖醋鱼汤，用取自南北湖中的生态有机鱼（胖头鱼），炖出乳白色的汤汁，在出锅前，加入白醋及韭芽段。这道醋鱼		汤酸鲜爽口，还有韭芽的香味沁入鱼肉，闻着香，吃着鲜。用醋做成的鱼汤，在海盐澉浦已有千年历史，一举多得，我们不得不感叹古人	的独特	创意。如今，澉浦后人在醋烧鱼的基础上，增创了“一鱼两吃”的烹制方法，即鱼头红烧，鱼尾煮汤，尝遍整条鱼的美味。</p>
+		  				</div>
+		  			</li>
+		  		</ul> -->
+		  	</div>
+
 		  <div class="hotel">
 		  	<ul class="tt-wrapper">
 		  		<li>
