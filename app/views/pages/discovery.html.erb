@@ -3,6 +3,7 @@
 	<head>
 		<meta http-equiv="content-language" content="zh" />
 		<%= stylesheet_link_tag "discovery.css" %>
+		<%= stylesheet_link_tag "stapel.css" %>
 	</head>
 	<body>
 		<div class="page">
@@ -167,6 +168,102 @@
 		  		</ul>
 		    </div>
 		    <!-- HOTEL END -->
+		    <!-- ENTERTAINMENT -->
+				<div class="entertainment">
+					<div class="topbar">
+						<span id="close" class="back">&larr;</span>
+						<h2></h2><h3 id="name"></h3>
+					</div>
+					<div class="enter-container">
+						<ul id="tp-grid" class="tp-grid">
+						<!-- KTV -->
+						<li data-pile="KTV">
+							<a href="http://drbl.in/cmVe">
+								<span class="tp-info"><span>KTV1</span></span>
+								<%= image_tag "1/1.jpg" %>
+							</a>
+						</li>
+						<li data-pile="KTV">
+							<a href="http://drbl.in/cmhM">
+								<span class="tp-info"><span>KTV2</span></span>
+								<%= image_tag "1/2.jpg" %>
+							</a>
+						</li>
+
+						<!-- CAFE -->
+						<li data-pile="CAFE">
+							<a href="http://drbl.in/eiUm">
+								<span class="tp-info"><span>CAFE1</span></span>
+								<%= image_tag "2/1.jpg" %>
+							</a>
+						</li>
+						<li data-pile="CAFE">
+							<a href="http://drbl.in/ekMY">
+								<span class="tp-info"><span>CAFE2</span></span>
+								<%= image_tag "2/2.jpg" %>
+							</a>
+						</li>
+
+						<!-- BAR -->
+						<li data-pile="BAR">
+							<a href="http://drbl.in/fzUB">
+								<span class="tp-info"><span>BAR1</span></span>
+								<%= image_tag "3/1.jpg" %>
+							</a>
+						</li>
+						<li data-pile="BAR">
+							<a href="http://drbl.in/fQEv">
+								<span class="tp-info"><span>BAR2</span></span>
+								<%= image_tag "3/2.jpg" %>
+							</a>
+						</li>
+
+						<!-- GYM & MASSAGE -->
+						<li data-pile="GYM & MASSAGE">
+							<a href="http://drbl.in/cyWa">
+								<span class="tp-info"><span>GYM &amp; MASSAGE1</span></span>
+								<%= image_tag "4/1.jpg" %>
+							</a>
+						</li>
+						<li data-pile="GYM & MASSAGE">
+							<a href="http://drbl.in/cRkb">
+								<span class="tp-info"><span>GYM &amp; MASSAGE2</span></span>
+								<%= image_tag "4/2.jpg" %>
+							</a>
+						</li>
+						</ul>
+					</div>
+				</div>
+		    <!-- ENTERTAINMENT END -->
+		    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" %>
+				<%= javascript_include_tag "jquery.stapel.js" %>
+				<script type="text/javascript">	
+			$(function() {
+
+				var $grid = $( '#tp-grid' ),
+					$name = $( '#name' ),
+					$close = $( '#close' ),
+					$loader = $( '<div class="loader"><i></i><i></i><i></i><i></i><i></i><i></i><span>Loading...</span></div>' ).insertBefore( $grid ),
+					stapel = $grid.stapel( {
+						onLoad : function() {
+							$loader.remove();
+						},
+						onBeforeOpen : function( pileName ) {
+							$name.html( pileName );
+						},
+						onAfterOpen : function( pileName ) {
+							$close.show();
+						}
+					} );
+
+				$close.on( 'click', function() {
+					$close.hide();
+					$name.empty();
+					stapel.closePile();
+				} );
+
+			} );
+		</script>
 		</div>
 	</body>
 </html>
