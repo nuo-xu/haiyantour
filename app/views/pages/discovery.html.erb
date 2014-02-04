@@ -96,6 +96,7 @@
 							data-title="一品田园螺"
 							data-description='原料选自田螺、鲜猪肉，辅料配以海盐本地大头菜。一品田园螺不仅味美可口，体现当地特色，而且具有很高的营养价值和药用价值。营养价值：田螺的可食部每100克约含水分81克、蛋白质10.7克、脂肪1.2克、碳水化物4克、灰分3.3克，又含钙1357毫克、磷19l毫克、铁19.8毫克、硫胺素0.05毫克、核黄素0.17毫克、尼克酸2.2毫克、维生素A130国际单位。<br>药用价值：田螺具有很高的药用价值，清热利水、除湿解毒。用于热结小便不通、黄疸、脚气、水肿、消渴、痔疮、便血、目赤肿痛、疔疮肿毒。《本草拾遗》中记载："煮食之，利大小便，去腹中结热，目下黄，脚气冲上，小腹结硬，小便赤涩，脚手浮肿；生浸取汁饮之，止消渴；碎其内敷热疮。"'>
 							<%= image_tag "2.png" %>
+						</div>
 					</li>
 					<li>
 						<a href="#">
@@ -120,10 +121,10 @@
 						</div>
 					</li>
 				</ul>
-		  	</div>
-		  	<!-- FOOD END -->
-		  	<!-- HOTEL -->
-		    <div class="hotel">
+		  </div>
+		  <!-- FOOD END -->
+		  <!-- HOTEL -->
+		  <div class="hotel">
 		  		<ul class="tt-wrapper">
 		  			<li>
 		  				<%= link_to "http://www.wanjinghotel.com", {:class=>"tt_one"} do %>
@@ -166,10 +167,10 @@
 		  				<% end %>
 		  			</li>
 		  		</ul>
-		    </div>
-		    <!-- HOTEL END -->
-		    <!-- ENTERTAINMENT -->
-				<div class="entertainment">
+		  </div>
+		  <!-- HOTEL END -->
+		  <!-- ENTERTAINMENT -->
+			<div class="entertainment">
 					<div class="topbar">
 						<span id="close" class="back">&larr;</span>
 						<h2></h2><h3 id="name"></h3>
@@ -233,37 +234,37 @@
 						</li>
 						</ul>
 					</div>
-				</div>
-		    <!-- ENTERTAINMENT END -->
-		    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" %>
-				<%= javascript_include_tag "jquery.stapel.js" %>
-				<script type="text/javascript">	
-			$(function() {
+			</div>
+		  <!-- ENTERTAINMENT END -->
+		  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" %>
+			<%= javascript_include_tag "jquery.stapel.js" %>
+			<script type="text/javascript">	
+				$(function() {
 
-				var $grid = $( '#tp-grid' ),
-					$name = $( '#name' ),
-					$close = $( '#close' ),
-					$loader = $( '<div class="loader"><i></i><i></i><i></i><i></i><i></i><i></i><span>Loading...</span></div>' ).insertBefore( $grid ),
-					stapel = $grid.stapel( {
-						onLoad : function() {
-							$loader.remove();
-						},
-						onBeforeOpen : function( pileName ) {
-							$name.html( pileName );
-						},
-						onAfterOpen : function( pileName ) {
-							$close.show();
-						}
+					var $grid = $( '#tp-grid' ),
+						$name = $( '#name' ),
+						$close = $( '#close' ),
+						$loader = $( '<div class="loader"><i></i><i></i><i></i><i></i><i></i><i></i><span>	Loading...</span></div>' ).insertBefore( $grid ),
+						stapel = $grid.stapel( {
+							onLoad : function() {
+								$loader.remove();
+							},
+							onBeforeOpen : function( pileName ) {
+								$name.html( pileName );
+							},
+							onAfterOpen : function( pileName ) {
+								$close.show();
+							}
+						} );
+	
+					$close.on( 'click', function() {
+						$close.hide();
+						$name.empty();
+						stapel.closePile();
 					} );
 
-				$close.on( 'click', function() {
-					$close.hide();
-					$name.empty();
-					stapel.closePile();
 				} );
-
-			} );
-		</script>
+			</script>
 		</div>
 	</body>
 </html>
