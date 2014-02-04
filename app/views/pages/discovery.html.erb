@@ -7,7 +7,6 @@
 	</head>
 	<body>
 		<div class="page">
-			<!-- FOOD -->
 			<div class="food">
 				<ul class="mh-menu">
 					<li>
@@ -123,7 +122,6 @@
 				</ul>
 		  </div>
 		  <!-- FOOD END -->
-		  <!-- HOTEL -->
 		  <div class="hotel">
 		  		<ul class="tt-wrapper">
 		  			<li>
@@ -169,7 +167,6 @@
 		  		</ul>
 		  </div>
 		  <!-- HOTEL END -->
-		  <!-- ENTERTAINMENT -->
 			<div class="entertainment">
 					<div class="topbar">
 						<span id="close" class="back">&larr;</span>
@@ -236,11 +233,59 @@
 					</div>
 			</div>
 		  <!-- ENTERTAINMENT END -->
+		  <div class="tour">
+		  	<ul id="st-stack" class="st-stack-raw">
+		  		<li>
+		  			<div class="st-item"><%= image_tag "tour/1.jpg" %></div>
+		  			<div class="st-title"><h2>TOUR COMPANY NO.1</h2></div>
+		  		</li>
+		  		<li>
+						<div class="st-item"><%= image_tag "tour/2.jpg" %>
+		  			</div>
+		  			<div class="st-title"><h2>TOUR COMPANY NO.2</h2>
+		  			</div>
+		  		</li>
+		  		<li>
+		  			<div class="st-item"><%= image_tag "tour/3.jpg" %></div>
+		  			<div class="st-title"><h2>TOUR COMPANY NO.3</h2></div>
+		  		</li>
+		  		<li>
+		  			<div class="st-item"><%= image_tag "tour/4.jpg" %></div>
+		  			<div class="st-title"><h2>TOUR COMPANY NO.4</h2></div>
+		  		</li>
+		  		<li>
+		  			<div class="st-item"><%= image_tag "tour/5.jpg" %></div>
+		  			<div class="st-title"><h2>TOUR COMPANY NO.5</h2></div>
+		  		</li>
+		  		<li>
+		  			<div class="st-item"><%= image_tag "tour/6.jpg" %></div>
+		  			<div class="st-title"><h2>TOUR COMPANY NO.6</h2></div>
+		  		</li>
+		  		<li>
+		  			<div class="st-item"><%= image_tag "tour/7.jpg" %></div>
+		  			<div class="st-title"><h2>TOUR COMPANY NO.7</h2></div>
+		  		</li>
+		  		<li>
+		  			<div class="st-item"><%= image_tag "tour/8.jpg" %></div>
+		  			<div class="st-title"><h2>TOUR COMPANY NO.8</h2></div>
+		  		</li>
+		  		<li>
+		  			<div class="st-item"><%= image_tag "tour/9.jpg" %></div>
+		  			<div class="st-title"><h2>TOUR COMPANY NO.9</h2></div>
+		  		</li>
+		  		<li>
+		  			<div class="st-item"><%= image_tag "tour/10.jpg" %></div>
+		  			<div class="st-title"><h2>TOUR COMPANY NO.10</h2></div>
+		  		</li> 
+		  	</ul>
+		  </div>
+		  <!-- TOUR END -->
 		  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" %>
 			<%= javascript_include_tag "jquery.stapel.js" %>
+			<%= javascript_include_tag "jquery.stackslider.js" %>
 			<script type="text/javascript">	
 				$(function() {
-
+					// entertainment section
 					var $grid = $( '#tp-grid' ),
 						$name = $( '#name' ),
 						$close = $( '#close' ),
@@ -264,6 +309,11 @@
 					} );
 
 				} );
+				$( function() {
+				
+					$( '#st-stack' ).stackslider();
+
+			});
 			</script>
 		</div>
 	</body>
