@@ -1,39 +1,35 @@
-<!-- TODO: UI  -->
-<%= form_for(Contact.new) do |f| %>
-
-	<div>
-	<%= f.label :first_name %><br>
-	<%= f.text_field :first_name %>
+<head>
+	<%= stylesheet_link_tag "contacts.css" %>
+</head>
+<body>
+	<div class="form-container">
+		<div class="form-main">
+			<%= form_for Contact.new, :url => url_for(:controller => "contacts", :action => "create"), html: {class:"cbp-mc-form"} do |f| %>
+				<div class="cbp-mc-column">
+					<%= f.label :first_name %>
+					<%= f.text_field :first_name %>
+					<%= f.label :last_name %>
+					<%= f.text_field :last_name %>
+					<%= f.label :email %>
+					<%= f.text_field :email %>
+					<%= f.label :telephone %>
+					<%= f.text_field :telephone %>
+					<%= f.label :company %>
+					<%= f.text_field :company %>
+				</div>
+				<div class="cbp-mc-column">
+					<%= f.label :kind %>
+					<%= f.select :kind, ["", "Complaint", "Consultant", "Suggestion"], {} %>
+					<%= f.label :heard_about_us %>
+					<%= f.select :heard_about_us, ["", "News/Magzine", "Weibo/wechat/facebook", "HaiyanTour Website, Newsletter", "Conference", "Other"], {} %>
+					<%= f.label :content %>
+					<%= f.text_area :content %>
+				</div>
+				
+				<div class="cbp-mc-submit-wrap">
+					<%= f.submit "SUBMIT", :class => "cbp-mc-submit" %>
+				</div>
+			<% end %>
+		</div>
 	</div>
-	<div>
-	<%= f.label :last_name %><br>
-	<%= f.text_field :last_name %>
-	</div>
-	<div>
-	<%= f.label :email %><br>
-	<%= f.text_field :email %>
-	</div>
-	<div>
-	<%= f.label :telephone %><br>
-	<%= f.text_field :telephone %>
-	</div>
-	<div>
-	<%= f.label :company %><br>
-	<%= f.text_field :company %>
-	</div>
-	<div>
-	<%= f.label :kind %><br>
-	<%= f.select :kind, ["", "Complaint", "Consultant", "Suggestion"], {} %>
-	</div>
-	<div>
-	<%= f.label :content %><br>
-	<%= f.text_area :content %>
-	</div>
-	<div>
-	<%= f.label :heard_about_us %><br>
-	<%= f.select :heard_about_us, ["", "News/Magzine", "Weibo/wechat/facebook", "HaiyanTour Website, Newsletter", "Conference", "Other"], {} %>
-	</div>
-		<%= f.submit "Submit" %>
-	</div>
-<% end %>
-
+</body>
